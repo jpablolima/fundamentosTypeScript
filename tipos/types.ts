@@ -88,10 +88,13 @@ let usuario: { name: string, age: number} = {
 // console.log(usuario);
 
 
-let funcionario : {
-    supervisores: string[],
+type Funcionario = {
+    supervisores: string [],
     baterPonto: (horas: number) => string
-} = {
+
+    }
+
+let funcionario : Funcionario = {
     supervisores: ['Ana', 'Pedro'],
     baterPonto(horario: number): string {
         if (horario <= 8) {
