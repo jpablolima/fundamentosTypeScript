@@ -40,9 +40,9 @@ var carro = 'BMW';
 carro = { marca: "BMW", ano: 2020 };
 //console.log(carro);
 // types in functions
-function retonaMeuNome() {
-    // return nome;
-}
+// function retonaMeuNome(): string{
+//     // return nome;
+// }
 // console.log(retonaMeuNome());
 function digaOi() {
     // console.log('oi')
@@ -91,7 +91,7 @@ var produto = {
             falha('Precisa de um nome');
         }
         if (this.preco <= 0) {
-            falha('Preço inválido');
+            falha('Valor  inválido');
         }
     }
 };
@@ -109,3 +109,4 @@ var correntista = {
 };
 correntista.contaBancaria.depositar(3000);
 console.log(correntista);
+//# sourceMappingURL=types.js.map

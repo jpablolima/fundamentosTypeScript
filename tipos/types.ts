@@ -52,9 +52,9 @@ carro = { marca: "BMW", ano: 2020};
 
 // types in functions
 
-function retonaMeuNome(): string{
-    // return nome;
-}
+// function retonaMeuNome(): string{
+//     // return nome;
+// }
 // console.log(retonaMeuNome());
 
 function digaOi(): void{
@@ -126,7 +126,7 @@ const produto = {
             falha('Precisa de um nome')
         }
         if(this.preco <= 0) {
-            falha('Preço inválido')
+            falha('Valor  inválido')
         }
     }
 }
