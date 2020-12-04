@@ -51,7 +51,7 @@ class Carro {
         private velocidadeMaxima: number = 200){
 
     } 
-    private alterarVelocidade(delta: number): number{
+    protected alterarVelocidade(delta: number): number{
         const novaVelocidade = this.velocdidadeAtual  + delta
         const velocidadeValida = novaVelocidade >= 0
         && novaVelocidade <= this.velocidadeMaxima
@@ -80,3 +80,43 @@ Array(20).fill(0).forEach(() => carro1.frear())
 console.log("Aceleração Atual " + carro1.acelerar())
 console.log("Desaceleração Atual " + carro1.frear())
 
+
+
+// Herança
+
+class Ferrari extends Carro{
+    constructor(modelo: string, velocidadeMaxima: number){
+        super('Ferrari', modelo, velocidadeMaxima)
+    }
+    public acelerar(): number{
+        return this.alterarVelocidade(20)
+    }
+    public frear(): number{
+        return this.alterarVelocidade(-15)
+    }
+}
+
+const f40  = new Ferrari('f40', 325)
+console.log(`${f40.marca} ${f40.modelo}`)
+Array(50).fill(0).forEach(() => f40.acelerar());
+Array(10).fill(0).forEach(() => f40.frear())
+console.log(f40.acelerar())
+console.log(f40.frear())
+
+// Getters & Setters
+
+class Pessoa{
+    private _idade: number = 0
+    
+    get idade(): number{
+        return this._idade
+    }
+    set idade(valor: number) {
+        if(valor >= 0 && valor <=110) {
+            this._idade = valor
+        }
+    }
+}
+const pessoa1 = new Pessoa
+pessoa1.idade = 20
+console.log(`Idade: ${pessoa1.idade}`)
