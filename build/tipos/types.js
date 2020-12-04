@@ -108,5 +108,5 @@ let correntista = {
     contatos: ['34567890', '98765432']
 };
 correntista.contaBancaria.depositar(3000);
-console.log(correntista);
+// console.log(correntista)
 //# sourceMappingURL=types.js.map

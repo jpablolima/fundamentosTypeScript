@@ -20,8 +20,9 @@ const multplicar = (n1, n2) => {
 // console.log(multplicar(2,4));
 const saudacao = () => console.log('olá');
 saudacao();
-const falarCom = (pessoa) => console.log(" olá " + pessoa);
-falarCom('Pablo');
+// const falarCom = (pessoa: string) => 
+//     // console.log(" olá " + pessoa);
+// falarCom('Pablo')
 // Parâmetros Padrão
 function contagemRegressiva(inicio = 3) {
     // console.log(inicio);
@@ -61,8 +62,8 @@ tuplaParam2(...tupla);
 // Destructuring (Array)
 const caracteristicas = ['Motor', 2020];
 const [motor, ano] = caracteristicas;
-console.log(motor);
-console.log(ano);
+//  console.log(motor);
+//  console.log(ano);
 // Destructuring (Objeto)
 const item = {
     nome: 'Lamborghini Aventador ',
@@ -91,35 +92,33 @@ const bemVindo = `
 
 `;
 // console.log(bemVindo);
-// Callback
-function eperar3s(callback) {
-    setTimeout(() => {
-        callback('3s depois...Callback');
-    }, 3000);
-}
-// eperar3s(function(resultado: string){
-//     console.log(resultado)
-// })
-// // Promise
-// function esperar4sPromise(){
-//     return new Promise((resolve: any) => {
-//         setTimeout(() => {
-//             resolve('4s depois... Promise')
-//         }, 4000)
-//     })
+// // Callback
+// function eperar3s(callback: (dado: string) => void){
+//     setTimeout(() =>{
+//         callback('3s depois...Callback')
+//     }, 3000)
 // }
-// esperar4sPromise()
-//     .then(dado => console.log(dado))
-fetch('https://swapi.dev/api/people/1')
-    .then(res => res.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme));
-fetch('https://dadosabertos.camara.leg.br/api/v2/blocos/575')
-    .then(res => res.json())
-    .then(dados => dados.dados)
-    // .then(films => fetch(films[0]))
-    // .then(resFilm => resFilm.json())
-    .then(dados => console.log(dados));
+// // eperar3s(function(resultado: string){
+// //     console.log(resultado)
+// // })
+// // // Promise
+// // function esperar4sPromise(){
+// //     return new Promise((resolve: any) => {
+// //         setTimeout(() => {
+// //             resolve('4s depois... Promise')
+// //         }, 4000)
+// //     })
+// // }
+// // esperar4sPromise()
+// //     .then(dado => console.log(dado))
+// fetch('https://swapi.dev/api/people/1')
+//     .then(res => res.json())
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(resFilm => resFilm.json())
+//     .then(filme => console.log(filme))
+//     fetch('https://dadosabertos.camara.leg.br/api/v2/blocos/575')
+//     .then(res => res.json())
+//     .then(dados => dados.dados)
+//     .then(dados=> console.log(dados))
 //# sourceMappingURL=ecmascript.js.map
