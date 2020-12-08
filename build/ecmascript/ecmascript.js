@@ -111,12 +111,12 @@ const bemVindo = `
 // // }
 // // esperar4sPromise()
 // //     .then(dado => console.log(dado))
-// fetch('https://swapi.dev/api/people/1')
-//     .then(res => res.json())
-//     .then(personagem => personagem.films)
-//     .then(films => fetch(films[0]))
-//     .then(resFilm => resFilm.json())
-//     .then(filme => console.log(filme))
+fetch('https://swapi.dev/api/people/1')
+    .then(res => res.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(resFilm => resFilm.json())
+    .then(filme => console.log(filme));
 //     fetch('https://dadosabertos.camara.leg.br/api/v2/blocos/575')
 //     .then(res => res.json())
 //     .then(dados => dados.dados)
