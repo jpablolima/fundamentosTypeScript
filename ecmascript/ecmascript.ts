@@ -158,7 +158,7 @@ fetch('https://swapi.dev/api/people/1')
     .then(personagem => personagem.films)
     .then(films => fetch(films[0]))
     .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme))
+    // .then(filme => console.log(filme))
     
 
  

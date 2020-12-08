@@ -11,14 +11,25 @@
     <h1>TypeScript</h1>
 
 
-
+    <script src="/node_modules/systemjs/dist/system.js"></script>
     <script src="/build/tipos/types.js"></script>
     <script src="/build/ecmascript/ecmascript.js"></script>
     <script src="/build/classes/classes.js"></script>
     <script src="/build/Namespaces/namespaces.js"></script>
     <script src="/build/Namespaces/geometriaCirc.js"></script>
     <script src="/build/Namespaces/geometriaRect.js"></script>
-
+    <!-- <script src="/build/Modulos/modulos.js"></script> -->
+    <script>
+        SystemJS.config({
+            baseUrl: '/Modulos',
+            packages: {
+                '/Modulos': {
+                    defaultJSExtension: true
+                }
+            }
+        })
+        SystemJS.import('./build/Modulos/modulos.js')
+    </script>
 </body>
 
 </html>
